@@ -45,6 +45,7 @@ pub fn main() !void {
 }
 
 /// Parses the file from the arguments into an ArrayList
+/// Needs to be freed by the caller
 fn parse_file_args(allocator: *mem.Allocator) !std.ArrayList(u32) { 
     // Parse input file location
     var args = try std.process.argsAlloc(allocator);
